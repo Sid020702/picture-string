@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Outfit:wght@700&family=Water+Brush&display=swap');
+
+.header h1 {
+    background: -webkit-linear-gradient(turquoise, magenta);
+    -webkit-background-clip: text;
+    font-family: 'Water Brush', cursive;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 6px 6px;
+}

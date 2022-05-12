@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React from 'react';
+import Header from './components/header/header.component';
 import './App.css';
+import StringComponent from './components/string/string.component';
+import Footer from './components/footer/footer.component';
+class App extends React.Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  componentDidMount() {
+    let grid = document.getElementById('grid')
+    const gridComputedStyle = window.getComputedStyle(grid);
+
+
+    // get number of grid columns
+    const gridColumnCount = gridComputedStyle.getPropertyValue("grid-template-columns").split(" ").length;
+    const gridRowCount = gridComputedStyle.getPropertyValue("grid-template-rows").split(" ").length;
+
+    var nodes = document.getElementById('grid').childNodes
+    let i = gridColumnCount - 1;
+    while (i < (nodes.length)) {
+      nodes[i].style.visibility = 'hidden'
+      i += gridColumnCount
+    }
+
+  }
+  render() {
+
+    return (
+      <div className="App">
+        <Header />
+        <StringComponent />
+        <Footer />
+      </div>
+    );
+  }
+
 }
 
 export default App;
