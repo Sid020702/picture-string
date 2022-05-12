@@ -3,7 +3,7 @@
     box-shadow: 0px 10px 20px;
     width: 85vw;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     overflow-x: hidden;
     position: relative;
     margin: 3rem 0;
