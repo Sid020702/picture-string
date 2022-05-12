@@ -17,10 +17,10 @@ class App extends React.Component {
 
     var nodes = document.getElementById('grid').childNodes
     let i = gridColumnCount - 1;
-    // while (i < (nodes.length)) {
-    //   nodes[i].style.visibility = 'hidden'
-    //   i += gridColumnCount
-    // }
+    while (i < (nodes.length)) {
+      nodes[i].style.visibility = 'hidden'
+      i += gridColumnCount
+    }
 
   }
   render() {
