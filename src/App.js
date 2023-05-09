@@ -8,6 +8,9 @@ class App extends React.Component {
 
   componentDidMount() {
     let grid = document.getElementById('grid')
+    grid.addEventListener('click', () => {
+      window.location.href = "https://drive.google.com/file/d/1CGZ3lxaEQIqRFd7xKqI6OpVmfFRLDGfP/view?usp=sharing"
+    })
     const gridComputedStyle = window.getComputedStyle(grid);
 
 

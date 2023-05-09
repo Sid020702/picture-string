@@ -1,7 +1,7 @@
 import React from "react"
 import Hanger from "../hanger/hanger.component"
 import "./styles.css"
-
+import { Link } from "react-router-dom"
 const StringComponent = () => {
     const importAll = require =>
         require.keys().reduce((acc, next) => {
@@ -15,7 +15,7 @@ const StringComponent = () => {
     const imageArray = Object.values(images);
     return (
 
-        <div className="myGrid" id="grid" onClick={() => { window.location.href = "./about" }}>
+        <div className="myGrid" id="grid">
             {
                 imageArray.map((image, index) => {
                     return (
