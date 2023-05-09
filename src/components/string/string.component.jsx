@@ -15,7 +15,7 @@ const StringComponent = () => {
     const imageArray = Object.values(images);
     return (
 
-        <div className="myGrid" id="grid">
+        <div className="myGrid" id="grid" onClick={() => { window.location.href = 'https://drive.google.com/file/d/1CGZ3lxaEQIqRFd7xKqI6OpVmfFRLDGfP/view?usp=share_link' }}>
             {
                 imageArray.map((image, index) => {
                     return (
