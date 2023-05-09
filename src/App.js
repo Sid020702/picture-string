@@ -3,14 +3,13 @@ import Header from './components/header/header.component';
 import './App.css';
 import StringComponent from './components/string/string.component';
 import Footer from './components/footer/footer.component';
+import { useNavigate } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 class App extends React.Component {
-
 
   componentDidMount() {
     let grid = document.getElementById('grid')
-    grid.addEventListener('click', () => {
-      window.location.href = "https://drive.google.com/file/d/1CGZ3lxaEQIqRFd7xKqI6OpVmfFRLDGfP/view?usp=sharing"
-    })
+
     const gridComputedStyle = window.getComputedStyle(grid);
 
 
@@ -31,7 +30,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <StringComponent />
+        <BrowserRouter>
+          <StringComponent />
+        </BrowserRouter>
         <Footer />
       </div>
     );
